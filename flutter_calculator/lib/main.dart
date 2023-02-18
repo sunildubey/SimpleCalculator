@@ -36,26 +36,29 @@ class _CalculatorState extends State<Calculator> {
   @override
   Widget build(BuildContext context) {
     return Column(
-      mainAxisAlignment: MainAxisAlignment.start,
       children: <Widget>[
         Expanded(
           child: Padding(
             padding: const EdgeInsets.symmetric(vertical: 30, horizontal: 20),
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: <Widget>[
-                Text(
-                  displayInputs == null ? "" : "$displayInputs",
-                  style: typeTextStyle,
-                ),
-                Align(
-                  child: Text(
-                    result == null ? "" : "$result",
-                    style: kResultTextStyle,
+            child: Align(
+              alignment: Alignment.bottomRight,
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.end,
+                crossAxisAlignment: CrossAxisAlignment.end,
+                children: <Widget>[
+                  Text(
+                    displayInputs == null ? "" : "$displayInputs",
+                    style: typeTextStyle,
                   ),
-                ),
-              ],
+                  Visibility(
+                    visible: result != null,
+                    child: Text(
+                      result == null ? "" : "$result",
+                      style: kResultTextStyle,
+                    ),
+                  ),
+                ],
+              ),
             ),
           ),
         ),

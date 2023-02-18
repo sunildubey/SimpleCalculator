@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 
-const kBackground = Color(0xFFF4FAFB);
+const kBackground = Color.fromARGB(255, 56, 58, 58);
 
-const kButtonBackground = Color(0xFF7ABDD7);
-const kCancelButtonBackground = Color(0xFF9FC3CF);
-const kTextColorBlack = Color(0xFF2C5364);
-const kTextColorWhite = Color(0xFFF4FAFB);
-const kTextColorDarkBlue = Color(0xFF2C7493);
+const kButtonBackground = Color.fromARGB(255, 11, 168, 230);
+const kCancelButtonBackground = Color.fromARGB(255, 76, 93, 98);
+const kTextColorBlack = Color.fromRGBO(23, 168, 231, 1);
+const kTextColorWhite = Color.fromARGB(255, 85, 87, 87);
+const kTextColorDarkBlue = Color.fromARGB(255, 4, 171, 242);
 
 const typeTextStyle = TextStyle(
   fontSize: 28,
